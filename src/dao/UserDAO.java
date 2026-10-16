@@ -88,7 +88,7 @@ public class UserDAO {
         lastError = "";
 
         String sql =
-                "SELECT id, username, password, role " +
+                "SELECT id, username, role " +
                 "FROM users ORDER BY id";
 
         Connection conn = DatabaseConnection.getConnection();
@@ -104,8 +104,6 @@ public class UserDAO {
                         "ID: " + rs.getInt("id")
                                 + " | Username: "
                                 + rs.getString("username")
-                                + " | Password: "
-                                + rs.getString("password")
                                 + " | Role: "
                                 + rs.getString("role")
                                 + "\n"
